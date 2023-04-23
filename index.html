@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Image Upscale Website</title>
+</head>
+<body>
+  <header>
+    <h1>Image Upscale Website</h1>
+  </header>
+  <main>
+    <form id="upload-form">
+      <input type="file" name="images" id="image-upload" multiple accept="image/*">
+      <label for="upscale-ratio">Upscale Ratio:</label>
+      <select name="upscale-ratio" id="upscale-ratio">
+        <option value="2">x2</option>
+        <option value="3">x3</option>
+      </select>
+      <button type="submit">Upload and Upscale Images</button>
+    </form>
+    <div id="preview-container">
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
