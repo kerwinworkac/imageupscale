@@ -28,8 +28,12 @@ def upload():
 def send_image(path):
     return send_from_directory('images', path)
 
+@app.route('/')
+def serve_index():
+    return send_from_directory('', 'index.html')
+
 @app.route('/<path:path>')
-def send_root(path):
+def serve_file(path):
     return send_from_directory('', path)
 
 if __name__ == '__main__':
