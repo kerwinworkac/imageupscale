@@ -7,6 +7,9 @@ RUN apt-get update && \
 
 WORKDIR /app
 
+# Create a new directory /images and give all permissions
+RUN chmod 777 -R /app
+
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
