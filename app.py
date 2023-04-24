@@ -28,5 +28,9 @@ def upload():
 def send_image(path):
     return send_from_directory('images', path)
 
+@app.route('/<path:path>')
+def send_root(path):
+    return send_from_directory('', path)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
